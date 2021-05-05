@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">C-19Vac</string>
+    <string name="title_activity_main">C-19Vac</string>
+    <string name="package_name">com.C19Vac.app</string>
+    <string name="custom_url_scheme">com.C19Vac.app</string>
+</resources>

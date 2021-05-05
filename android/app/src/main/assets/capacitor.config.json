@@ -1,0 +1,14 @@
+{
+  "appId": "com.C19Vac.app",
+  "appName": "C-19Vac",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  },
+  "cordova": {},
+  "linuxAndroidStudioPath": "/snap/bin/android-studio"
+}

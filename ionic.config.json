@@ -1,5 +1,8 @@
 {
   "name": "C-19Vac",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
   "type": "angular"
 }

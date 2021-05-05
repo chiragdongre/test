@@ -5,16 +5,73 @@
     </ion-title>
   </ion-toolbar>
 </ion-header>
+<style>
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 2px 1px;
+  cursor: pointer;
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">Find vaccine centre</ion-title>
     </ion-toolbar>
   </ion-header>
 
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+Enter Pin Code <input type="text" #tbName id="tbName">
+<p><br>
+Enter Number of days <input type="text" #tbDate id="tbDate">
+<p><br>
+    <button type="submit" class="button" (click)="getData(tbName.value,tbDate.value)" id="bt">
+        Click Here
+    </button>
+</p><br>
+                                            <label>List Of Centers</label>
+
+<br><br>
+<table>
+  <tr>
+    <th>Date</th>
+    <th>Centre Name</th>
+     <th>Available Slot</th>
+     <th>vaccine</th>
+  </tr>
+ <tr *ngFor="let recipient of totalmap | keyvalue">
+      
+   
+  
+    <td> {{recipient.key}}</td>
+    <td>{{recipient.value[0]}}</td>
+  <td>{{recipient.value[1]}}</td>
+  <td>{{recipient.value[2]}}</td>
+
+   </tr>
+</table>
   </div>
 </ion-content>
+
